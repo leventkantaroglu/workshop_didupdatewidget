@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
                 Expanded(
                   child: BodyWidget(market: market),
                 ),
-                /* TextButton(
+                TextButton(
                   onPressed: () {
                     setState(() {
                       market = Market.blueMarket;
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                     setState(() {});
                   },
                   child: const Text("(Yenile)"),
-                ), */
+                ),
               ],
             ),
           ),

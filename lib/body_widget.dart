@@ -19,7 +19,7 @@ class _BodyWidgetState extends State<BodyWidget> {
   @override
   void initState() {
     //print("BodyWidget: initState");
-    //createItems();
+    createItems();
     super.initState();
   }
 
@@ -28,6 +28,15 @@ class _BodyWidgetState extends State<BodyWidget> {
     setState(() {});
     items = await marketItems(widget.market);
     setState(() {});
+  }
+
+  @override
+  void didUpdateWidget(covariant BodyWidget oldWidget) {
+    if (widget.market != oldWidget.market) {
+      createItems();
+    }
+
+    super.didUpdateWidget(oldWidget);
   }
 
   @override
